@@ -1,0 +1,1 @@
+select Dname, DEPARTMENT.Dnumber, count(Dlocation) as locations from DEPARTMENT join DEPT_LOCATIONS on DEPT_LOCATIONS.Dnumber=DEPARTMENT.Dnumber where DEPARTMENT.Dnumber in (select Dnumber from DEPENDENT join DEPARTMENT on DEPENDENT.Essn=DEPARTMENT.Mgr_ssn where Sex='F' group by Dnumber having count(*)>1) group by Dname

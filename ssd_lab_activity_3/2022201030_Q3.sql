@@ -1,0 +1,1 @@
+select Mgr_ssn, count(Pno) as no_of_projects from DEPARTMENT join WORKS_ON on WORKS_ON.Essn=DEPARTMENT.Mgr_ssn where Mgr_ssn in (select Mgr_ssn from PROJECT join DEPARTMENT on DEPARTMENT.Dnumber=PROJECT.Dnum where Pname='ProductY') group by Mgr_ssn

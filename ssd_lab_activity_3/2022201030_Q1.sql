@@ -1,0 +1,1 @@
+select concat(Fname, ' ', Minit, ' ', Lname) as fullname, Ssn, Dno, Dname from EMPLOYEE join DEPARTMENT on EMPLOYEE.Dno=DEPARTMENT.Dnumber where Super_ssn not in (select Mgr_ssn from EMPLOYEE join DEPARTMENT on EMPLOYEE.Dno=DEPARTMENT.Dnumber join WORKS_ON on EMPLOYEE.Ssn=WORKS_ON.Essn where Hours<40) 
