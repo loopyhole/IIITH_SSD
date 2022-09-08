@@ -1,0 +1,61 @@
+body {
+    background: linear-gradient(60deg, red, blue);
+    font-family: Arial;
+}
+
+.tablecreator {
+    width: 50%;
+    height: 50%;
+    background-color: aliceblue;
+    
+    position: absolute;
+    top:0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    
+    padding: 5%;
+    margin: auto;
+    border-radius: 5%;
+    box-shadow: 5px 10px #000;
+}
+
+#studentTable {
+    table-layout: auto;
+    width: 90%;
+    padding: 2%;
+    border: 5px solid rgb(3, 3, 245);
+}
+
+#studentTable th {
+    background-color: rgb(240, 238, 126);
+
+}
+
+#studentTable tr:nth-child(odd) {
+    background-color: rgb(166, 249, 255);
+}
+
+#studentTable tr:nth-child(even) {
+    background-color: rgb(213, 192, 245);
+}
+
+#add {
+    background-color: greenyellow;
+    font-weight: bold;
+    padding: 10px;
+}
+
+#delete {
+    background-color: red;
+    font-weight: bold;
+    padding: 10px;
+}
+
+#formElements {
+    padding-bottom: 100px;
+}
+
+#formElements input {
+    padding: 10px;
+}

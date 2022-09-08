@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+    <head>
+        <title>Student Records</title>
+        <link rel = "stylesheet" href = "studentRecords.css">
+    </head>
+    <body>
+    <div class = "tablecreator">
+        <div id = "formElements">
+            <h1>Student Records</h1>
+            <input type = "text" placeholder = "Roll No." id = "rno">
+            <input type = "text" placeholder = "Student Name" id = "sname">
+            <button type = "button" onclick="addNew()" id="add">Add New</button>
+            <button type = "button" onclick="deleteRow()" id="delete">Delete Last Record</button>
+        </div>
+        <table border="3px" id = "studentTable">
+            <tr>
+                <th>Roll No.</th>
+                <th>Name</th>
+            </tr>
+        </table>
+
+        <script>
+            function addNew() {
+                var table = document.getElementById("studentTable");
+
+                var row = table.insertRow(table.rows.length);
+
+                var name = document.getElementById("sname").value;
+                var rno = document.getElementById("rno").value;
+
+                var element1 = row.insertCell(0);
+                var element2 = row.insertCell(1);
+
+                element1.innerHTML = rno;
+                element2.innerHTML = name;
+
+                document.getElementById("sname").value = null;
+                document.getElementById("rno").value = null;
+            }
+
+            function deleteRow() {
+                var table = document.getElementById("studentTable");
+                if (table.rows.length > 1)
+                    table.deleteRow(table.rows.length - 1);
+            }
+        </script>
+    </div>
+    </body>
+</html>
