@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title> SSD Lab Activity 6</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <h1>Team Form</h1>
+        <div class="formDiv">
+        <form name = "myForm">
+            <label>Manager Name</label>
+            <input type="text" name="managerName" required>
+            <br>
+            <label>Group Email</label>
+            <input type="text" name="grpEmail" required onkeyup="javascript:emailCheck()"> <span id = "mailError"></span>
+            <br>
+            <label>Server Username</label>
+            <input type="text" name="srvUsrname" required onkeyup="javascript:unameCheck()">  <span id = "unameError"></span>
+            <br>
+            <label>Server Password</label>
+            <input type="password" name="pass" required>
+            <br>
+            <label>Confirm Password</label>
+            <input type="password" name="confPass" required onfocusout="javascript: passCheck()"> <span id = "confError"></span>
+            <br>
+            <label>Team Lead</label>
+            <select name = "teamlead" required>
+                <option value = "Tony">Tony</option>
+                <option value = "Steve">Steve</option>
+                <option value = "Bruce">Bruce</option>
+                <option value = "Natasha">Natasha</option>
+                <option value = "Clint">Clint</option>
+                <option value = "Thor">Thor</option>
+            </select>
+            <br>
+            <label>Team Members</label>
+            <div class = "drags">
+                <div class = "drag1">
+                    <div class="draggableElements" draggable="true" ondragstart="drag(event)"><p>Tony</p></div>
+                    <div class="draggableElements" draggable="true" ondragstart="drag(event)"><p>Steve</p></div>
+                    <div class="draggableElements" draggable="true" ondragstart="drag(event)"><p>Bruce</p></div>
+                    <div class="draggableElements" draggable="true" ondragstart="drag(event)"><p>Natasha</p></div>
+                    <div class="draggableElements" draggable="true" ondragstart="drag(event)"><p>Clint</p></div>
+                    <div class="draggableElements" draggable="true" ondragstart="drag(event)"><p>Thor</p></div>
+                </div>
+                <div class = "drag2" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+            </div>
+            <br>
+            <button id="submitButton">Submit</button>
+        </form>
+        </div>
+        <script src="main.js"></script>
+    </body>
+</html>

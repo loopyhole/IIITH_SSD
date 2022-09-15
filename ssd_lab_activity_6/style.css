@@ -1,0 +1,56 @@
+.formDiv{
+    width: 50%;
+}
+
+label {
+    display: inline-block;
+    text-align: left;
+    width: 20%;
+    padding-bottom: 3%;
+    font-weight: bold;
+}
+
+h1 {
+    padding-left: auto;
+    padding-right: auto;
+    padding-bottom: 5%;
+    text-align: center;
+}
+
+input {
+    margin-bottom: 3%;
+    padding: 1%;
+}
+
+.drag1{
+    border: black solid 3px;
+    padding: 20px;
+}
+
+.drag2{
+    border: black solid 3px;
+    padding: 20px;
+} 
+
+.formDiv{
+    margin: 10px;
+}
+
+.drags {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 20px;
+    width: auto;
+}
+
+#submitButton {
+    padding-left: 3%;
+    padding-right: 3%;
+    padding-top: 1.5%;
+    padding-bottom: 1.5%;
+    color: aliceblue;
+    background-color: blue;
+    font-size: large;
+    width: 40%;
+}
+

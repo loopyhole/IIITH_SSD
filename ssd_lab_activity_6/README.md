@@ -1,0 +1,3 @@
+-- The errors are displayed via spans.
+-- Submit functionality, drag and drop, and dark mode not implemented. (drag and drop implemented partially)
+-- Assumed that email can start with a number.
